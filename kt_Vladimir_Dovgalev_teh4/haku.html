@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Haku</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[name="submit"]').click(function () {
+                var haettavaNimi = $("#nimi").val();
+                $.getJSON("http://localhost:3000/data/" + haettavaNimi, function (data) {
+                    if (data) {
+                        $("#puhelin").val(data.puhelin);
+                    } else {
+                        $("#puhelin").val("Ei löydy");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Haku nimellä</h1>
+    <form id="form" name="form">
+        <th>Syötä nimi:</th>
+        <td>
+            <input name="nimi" id="nimi" type="text" value="" maxlength="35" size="35" />
+        </td>
+        <td>
+            <input name="puhelin" id="puhelin" type="text" value="" maxlength="35" size="35" />
+        </td>
+        <td>
+            <input name="submit" type="button" value="Hae puhelinnumero" />
+        </td>
+    </form>
+
+    <br>
+    <a href="index.html">Takaisin pääsivulle</a>
+</body>
+</html>

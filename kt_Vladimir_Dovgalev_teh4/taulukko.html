@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Koko puhelinluettelo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Koko puhelinluettelo</h1>
+
+    <table border="1" id="taulu">
+        <tr>
+            <th>Nimi</th>
+            <th>Puhelinnumero</th>
+        </tr>
+    </table>
+
+    <br>
+    <a href="index.html">Takaisin pääsivulle</a>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON("http://localhost:3000/data",
+              function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var rivi = "<tr><td>" + data[i].nimi + "</td><td>" + data[i].puhelin + "</td></tr>";
+                    $("#taulu").append(rivi);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
