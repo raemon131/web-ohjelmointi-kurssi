@@ -1,0 +1,30 @@
+// Portfolio Modal 2
+#portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal2', aria-hidden='true')
+    .modal-dialog.modal-xl
+        .modal-content
+            .modal-header.border-0
+                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.text-center.pb-5
+                .container
+                    .row.justify-content-center
+                        .col-lg-8
+                            // Portfolio Modal - Title
+                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Teh 2
+                            // Icon Divider
+                            .divider-custom
+                                .divider-custom-line
+                                .divider-custom-icon
+                                    i.fas.fa-star
+                                .divider-custom-line
+                            // Portfolio Modal - Image
+                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cake.png', alt='...')
+                            // Portfolio Modal - Text
+                            p.mb-4
+                                | Tein puhelinluettelon, jossa on valikko prompt-komennon kautta. Voi lisätä henkilöitä ja hakea numeron nimen perusteella. Yhteystiedot tallennetaan olioina taulukkoon ja haku on eriytetty omaksi funktioksi, joka ottaa parametreina taulukon ja nimen.
+                                | Opin työskentelemään olioiden ja taulukoiden kanssa, ymmärsin miten taulukko välitetään funktiolle ja miten arvo palautetaan return-komennolla. Jos tekisin nyt uudestaan, lisäisin yhteystiedon poiston ja tarkistuksen duplikaateille.
+                            a.btn.btn-primary(href='https://github.com/raemon131/web-ohjelmointi-kurssi/blob/main/kt2.js', target='_blank')
+                                i.fas.fa-link.fa-fw
+                                | View Project
+                            button.btn.btn-primary(data-bs-dismiss='modal')
+                                i.fas.fa-xmark.fa-fw
+                                | Close Window

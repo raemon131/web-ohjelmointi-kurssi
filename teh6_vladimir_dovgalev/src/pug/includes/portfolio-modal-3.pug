@@ -1,0 +1,30 @@
+// Portfolio Modal 3
+#portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal3', aria-hidden='true')
+    .modal-dialog.modal-xl
+        .modal-content
+            .modal-header.border-0
+                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.text-center.pb-5
+                .container
+                    .row.justify-content-center
+                        .col-lg-8
+                            // Portfolio Modal - Title
+                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Teh 3
+                            // Icon Divider
+                            .divider-custom
+                                .divider-custom-line
+                                .divider-custom-icon
+                                    i.fas.fa-star
+                                .divider-custom-line
+                            // Portfolio Modal - Image
+                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='...')
+                            // Portfolio Modal - Text
+                            p.mb-4
+                                | Tein kaksi luokkaa perusluokan Henkilo henkilötiedoilla ja aliluokan Urheilija, joka perii sen extends-avainsanalla. Lisäsin get/set-metodit urheilijan attribuuteille ja loin kolme esimerkkioliota.
+                                | Opin työskentelemään luokkien ja periytymisen kanssa JavaScriptissä, ymmärsin miten super() toimii ja miksi getterit ja setterit ovat hyödyllisiä. Jos tekisin nyt uudestaan, tekisin tietojen tulostuksen siistimmin ja lisäisin tyyppitarkistuksen settereihin.
+                            a.btn.btn-primary(href='https://github.com/raemon131/web-ohjelmointi-kurssi/blob/main/urheilija.js', target='_blank')
+                                i.fas.fa-link.fa-fw
+                                | View Project
+                            button.btn.btn-primary(data-bs-dismiss='modal')
+                                i.fas.fa-xmark.fa-fw
+                                | Close Window

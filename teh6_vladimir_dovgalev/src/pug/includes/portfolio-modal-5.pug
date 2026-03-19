@@ -1,0 +1,29 @@
+// Portfolio Modal 5
+#portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', aria-labelledby='portfolioModal5', aria-hidden='true')
+    .modal-dialog.modal-xl
+        .modal-content
+            .modal-header.border-0
+                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.text-center.pb-5
+                .container
+                    .row.justify-content-center
+                        .col-lg-8
+                            // Portfolio Modal - Title
+                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Teh 5
+                            // Icon Divider
+                            .divider-custom
+                                .divider-custom-line
+                                .divider-custom-icon
+                                    i.fas.fa-star
+                                .divider-custom-line
+                            // Portfolio Modal - Image
+                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/safe.png', alt='...')
+                            // Portfolio Modal - Text
+                            p.mb-4
+                                | Sain opettajalta valmiin pohjan — taulukon yhteystiedoilla, lisäyslomakkeen ja poiston. Tehtäväni oli lisätä "Muokkaa"-painike ja muokkaus prompt-ikkunan kautta, joka tallentaa uuden numeron palvelimelle PUT-metodilla.
+                            a.btn.btn-primary(href='https://github.com/raemon131/web-ohjelmointi-kurssi/tree/main/kt5_Vladimir_Dovgalev/puh_luettelo', target='_blank')
+                                i.fas.fa-link.fa-fw
+                                | View Project
+                            button.btn.btn-primary(data-bs-dismiss='modal')
+                                i.fas.fa-xmark.fa-fw
+                                | Close Window
